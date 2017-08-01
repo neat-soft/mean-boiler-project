@@ -1,0 +1,129 @@
+.content {
+  margin-top: 50px;
+}
+.undecorated-link:hover {
+  text-decoration: none;
+}
+[ng\:cloak],
+[ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
+  display: none !important;
+}
+.header-profile-image {
+  border-radius: 50%;
+  height: 28px;
+  margin-right: 5px;
+  opacity: 0.8;
+  width: 28px;
+}
+.open .header-profile-image,
+a:hover .header-profile-image {
+  opacity: 1;
+}
+.user-header-dropdown-toggle {
+  padding-bottom: 11px !important;
+  padding-top: 11px !important;
+}
+.user-primary-account {
+  font-size: 30px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.error-text {
+  display: none;
+}
+.has-error .help-block.error-text {
+  display: block;
+}
+.has-error .help-inline.error-text {
+  display: inline;
+}
+.main{
+  
+  margin-top:40px;
+}
+
+.inputBox{
+	padding:20px;
+  background-color:#e6e5e4;
+}
+.inputBox>div{
+  margin-left:10px;
+  background-color:#e6e5e4;
+  
+}
+.inputBox>div>input{
+  width:100%;
+  height:30px;
+
+}
+.inputBox >input{
+	width:100px;
+	height:50px;
+	float:left;
+  margin-left:5px;
+}
+.tableBox{
+  margin-top:10px;
+  background-color:white;
+  height: calc(100vh - 200px);
+  padding:30px;
+}
+.tableBox>table{
+  padding:30px;
+  height: 450px;
+  overflow-y: scroll;
+}
+
+.navbar-toggle{
+  float:left!important;
+  display:block !important;
+}
+tr{
+  border-bottom: 1px solid #eee;
+  height:50px;
+  font-size:16px;
+}
+tr:hover{
+  cursor:pointer;
+}
+@media (min-width: 1090px) {
+  .table, table{
+    width:100%!important;
+    overflow-x: scroll;
+    display: block;
+  }
+}
+@media (max-width: 1090px, min-width:1024px;) {
+  .table, table{
+    width:800px!important;
+    overflow-x: scroll;
+    display: block;
+  }
+}
+
+@media (max-width: 1024px) {
+  .table, table{
+    width:800px!important;
+    overflow-x: scroll;
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .table, table{
+    width:600px!important;
+    overflow-x: scroll;
+    display: block;
+  }
+}
+@media (max-width: 640px) {
+  .table, table{
+    width:400px!important;
+    overflow-x: scroll;
+    display: block;
+  }
+}

@@ -1,0 +1,71 @@
+<section class="row">
+  <script type="text/ng-template" id="headerCheckbox.html">
+    <input type="checkbox" ng-model="vm.checkboxes.checked" class="select-all" value="" />
+  </script>
+<!--   <div>
+      <label>Input count of fake data to insert DB</label>
+      <input  type="number" style="width:100px" ng-model="vm.dbCount" >
+      <span><button ng-click="vm.insertDb()">Insert To DB</button></span>
+    <div>
+  <div> -->
+    
+    <div class="inputBox col-md-12">
+    <div class="col-sm-5">
+      <div style="width:200px;">
+        <label>Search:</label>
+        <input name="email", ng-model="vm.searchKey" placeholder="search keyword">
+      </div>
+    </div>
+
+    <div class="col-sm-1">
+      <label>Instagram</label>
+      <input name="Instagram", type="number", ng-change="vm.filterValue('instagram')" ng-model="vm.search.instagram">
+    </div>
+    <div class="col-sm-1" style="margin-left:10px;">
+      <label>Facebook</label>
+      <input name="Facebook", type="number", ng-change="vm.filterValue('facebook')" ng-model="vm.search.facebook">
+    </div>
+    <div class="col-sm-1" style="margin-left:10px;">
+      <label>Twitter</label>
+      <input name="Twitter", type = "number" ng-change="vm.filterValue('twitter')" ng-model="vm.search.twitter">
+    </div>
+    <div class="col-sm-1">
+      <label>Youtube</label>
+      <input name="Youtube", type="number",  ng-change="vm.filterValue('youtube')" ng-model="vm.search.youtube">
+    </div>
+    <div class="col-sm-1">
+      <label>Pinterest</label>
+      <input name="Pinterest", type="number", ng-change="vm.filterValue('pinterest')" ng-model="vm.search.pinterest">
+    </div>
+    <div class="col-sm-1">
+      <label>Blog</label>
+      <input name="Blog", type="number", ng-change="vm.filterValue('blog')" ng-model="vm.search.blog">
+    </div>
+    </div>
+  </div>
+  <div class="tableBox col-md-12" style="overflow: hidden;">
+   <table ng-table-dynamic="vm.tableInfo with vm.cols" class="table"  >
+        <colgroup>
+          <col width="5%"/>
+          <col width="10%"/>
+          <col width="10%"/>
+          <col width="10%"/>
+          <col width="10%"/>
+          <col width="10%"/>
+          <col width="10%"/>
+          <col width="10%"/>
+          <col width="10%"/>
+          <col width="10%"/>
+          <col width="10%"/>
+          <col width="15%"/>
+        </colgroup>
+        <tr ng-repeat="row in $data | filter: vm.searchKey ">
+          <td ng-repeat="col in $columns" ng-switch="col.field">
+            <input ng-switch-when="selector" type="checkbox" ng-model="vm.checkboxes.items[row.id]" />
+            <span ng-switch-default>{{row[col.field]}}</span>
+          </td>
+        </tr>
+      </table>
+
+  </div>
+</section>

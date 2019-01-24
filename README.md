@@ -1,4 +1,6 @@
-first, then install bower globally using npm:
+
+## Setup
+install bower globally using npm:
 ```bash
 $ npm install -g bower
 ```
